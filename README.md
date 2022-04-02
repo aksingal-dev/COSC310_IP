@@ -30,12 +30,30 @@ Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Mus
 
 ## APIs implemented as Individual Project
 
-1. 
+1. ### Google Directions API
+
+    The Bot is now able to provide you the directions from your current location to the nearest opening for the Hyperloop tunnel, This improves the overall experience by allowing the user the possibility to go experience the tunnel without having to search for it themselves as it is not taht easily found on google maps. The implementation uses a url call to the API the result of which is made available as a clickable link to the user on telegram. The parameter specified is the location of the tunnel, the user is able to see the directions from their current location or update the starting location as needed.
+
+<p align="center"> 
+<img width="620" height="414" src="static/img/direction.png">
+</p>
+
+2. ### Google Street View Image API
+
+    The bot is now able to provide the user with the street view experience of the SpaceX facility when the user shows interest in working there. This enriches the user expereince by not only providing an insight into the workplace but also giving a starting point for further research by showing where and nhow the building looks. The implementation uses a url call to the API the result of which is made available as a clickable link to the user on telegram. The parameter provided is the starting locaton. Once inside the streetview, the user is able to move around freely.
+
+<p align="center"> 
+<img width="620" height="414" src="static/img/streetview.png">
+</p>
+
+Both these APIs work regardless of whether the bot is being used on the telegram mobile app or the telegram PC app.
+
 ## Built With
 
 * [Python](https://www.python.org/) - Back End
 * [Dialogflow](https://cloud.google.com/dialogflow/docs) - Natural Language Processing
 * [Telegram](https://telegram.org/) - User Interface
+* [Google API](https://developers.google.com/maps/get-started) - Street View and Directions
 
 ## Author (Individual Project) Based on the work done by Group 32
 
