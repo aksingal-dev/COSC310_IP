@@ -6,6 +6,7 @@
 
 Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Musk. It can answer questions about Tesla, SpaceX, cryptocurrencies, and more - give it a try!
 
+link to Repository: https://github.com/aksingal-dev/COSC310_IP
 ## Code Structure
 
 ```
@@ -32,7 +33,19 @@ Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Mus
 
 1. ### Google Directions API
 
-    The Bot is now able to provide you the directions from your current location to the nearest opening for the Hyperloop tunnel, This improves the overall experience by allowing the user the possibility to go experience the tunnel without having to search for it themselves as it is not taht easily found on google maps. The implementation uses a url call to the API the result of which is made available as a clickable link to the user on telegram. The parameter specified is the location of the tunnel, the user is able to see the directions from their current location or update the starting location as needed.
+    The Bot is now able to provide you the directions from your current location to the nearest opening for the Hyperloop tunnel, This improves the overall experience by allowing the user the possibility to go experience the tunnel without having to search for it themselves as it is not taht easily found on google maps. The implementation uses a url call to the API that is sent using dialogflow. The result of the call is made available as a clickable link to the user on telegram. The parameter specified is the location of the tunnel, the user is able to see the directions from their current location or update the starting location as needed.
+
+    Example URL call or the result shown below:
+
+    ``` JSON
+    {
+    "telegram": {
+        "text": "The directions to the tunnel from your location can be found [here](https://www.google.com/maps/dir/?api=1&destination=33.9218%2C-118.326)..",
+        "parse_mode": "Markdown"
+    }
+    }
+
+    ```
 
 <p align="center"> 
 <img width="620" height="414" src="static/img/direction.png">
@@ -40,7 +53,19 @@ Elon Musk Bot is a chatbot inspired by the entrepreneur and billionaire Elon Mus
 
 2. ### Google Street View Image API
 
-    The bot is now able to provide the user with the street view experience of the SpaceX facility when the user shows interest in working there. This enriches the user expereince by not only providing an insight into the workplace but also giving a starting point for further research by showing where and nhow the building looks. The implementation uses a url call to the API the result of which is made available as a clickable link to the user on telegram. The parameter provided is the starting locaton. Once inside the streetview, the user is able to move around freely.
+    The bot is now able to provide the user with the street view experience of the SpaceX facility when the user shows interest in working there. This enriches the user expereince by not only providing an insight into the workplace but also giving a starting point for further research by showing where and nhow the building looks. The implementation uses a url call that is sent using dialogflow. The result of the call is made available as a clickable link to the user on telegram. The parameter provided is the starting locaton. Once inside the streetview, the user is able to move around freely.
+
+    Example URL call for the result shown below: 
+  
+    ``` JSON
+    {
+    "telegram": {
+        "text": "If you want to experience what it's like to work at SpaceX start by taking a look at our office [Here](https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=33.9198148%2C-118.3260661).",
+        "parse_mode": "Markdown"
+     }
+    }
+
+    ```
 
 <p align="center"> 
 <img width="620" height="414" src="static/img/streetview.png">
